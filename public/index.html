@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<link href="assets/style.css" rel="stylesheet" type="text/css" />
+		<title>Apple or Pokemon?</title>
+
+	</head>
+
+	<script type='html/template' id="progressTemplate">
+		<span>Progress: {currentlyOn}/{total}</span>
+	</script>
+
+	<script type='html/template' id="questionTemplate">
+		<span class="question">{name}</span>
+	</script>
+
+	<script type='html/template' id="answerTemplate">
+		<div class="question">{name}</div>
+		<div class="answer">{response}</div>
+		<div>The answer was {type}!</div>
+	</script>
+
+	<script type='html/template' id="resultsTemplate">
+		<div class="results-numbers">You got {totalCorrect} out of {totalQuestions} correct!</div>
+		<p>{msg}</p>
+	</script>
+
+	<script type='html/template' id="quizTemplate">
+		<div id='progress' class='progress'>
+			<!-- #progressTemplate goes here -->
+		</div>
+		<div id="quizQuestion" class='quiz-question'>
+			<!-- #questionTemplate goes here -->
+		</div>
+		<button class='button answer' value='apple'>Apple</button>
+		<button class='button answer' value='pokemon'>Pokemon</button>
+		<button id='continueQuiz' class='button continue-quiz'>Next</button>
+		<button id='showResults' class='button show-results'>Get Quiz Results</button>
+	</script>
+
+	<body>
+		<h1>Apple or Pokemon?</h1>
+		<div id='quizContainer' class='quiz-container'>
+			<p class='intro'>Think you know the difference between these pocket monsters and edible objects? Are you a Pokemon Master or an Fruity Disaster?</p>
+			<button id='startQuiz' class='button'>Let's Go!</button>
+		</div>
+
+		<div id='audio' class='audio'>
+			<a id='playMusic' href='#'>Need some inspirational music to get you through?</a>
+			<a id='stopMusic' class='hidden' href='#'>Want to turn the music off?</a>
+		</div>
+
+		<footer>
+			<span>Made as the result of a dumb joke by <a href='http://www.aliciability.com'>Alicia Sedlock</a>, 2013</span>
+		</footer>
+		
+	</body>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/riot.js"></script>
+	<script type="text/javascript" src="js/quiz.js"></script>
+	<script type="text/javascript" src="js/quizModel.js"></script>
+	<script type="text/javascript" src="js/questions.js"></script>
+
+</html>
